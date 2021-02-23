@@ -6,6 +6,8 @@
 package Ch2Part1Apps;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -41,6 +43,8 @@ public class MainApp extends Application{
         
         buttonSubmit = new Button("Submit");
         buttonCancel = new Button("Cancel");
+        buttonSubmit.setOnAction(new MyEventHandler());
+        buttonCancel.setOnAction(new MyEventHandler());
         HBox hBox1 = new HBox();
         hBox1.getChildren().addAll(buttonSubmit, buttonCancel);
         hBox1.setSpacing(20);
@@ -63,5 +67,23 @@ public class MainApp extends Application{
     
     public static void main(String[] args) {
         launch(args);
-    }    
+    } 
+    private class MyEventHandler implements EventHandler<ActionEvent>{
+
+        @Override
+        public void handle(ActionEvent event) {
+            if(event.getSource() == buttonSubmit){
+                if(textFieldLoginName.getText().equals("aashgar") &&
+                        passwordField.getText().equals("123456"))
+                    labelError.setText("Valid User");
+                else
+                    labelError.setText("Invalid Data");
+            }
+            else if (event.getSource() == buttonCancel){
+                textFieldLoginName.setText("");
+                passwordField.setText("");
+            }
+        }
+        
+    }
 }
