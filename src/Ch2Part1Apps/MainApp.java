@@ -37,6 +37,7 @@ public class MainApp extends Application{
         passwordField = new PasswordField();
         passwordField.setPromptText("Password");
         labelError = new Label("Initial text");
+        labelError.setId("label-error");
         VBox vBox1 = new VBox(10, labelTitle, textFieldLoginName, passwordField, labelError);
         vBox1.setAlignment(Pos.CENTER);
         vBox1.setStyle("-fx-border-color: red");
@@ -55,11 +56,13 @@ public class MainApp extends Application{
         vBox2.setAlignment(Pos.CENTER);
         vBox2.setStyle("-fx-border-color: navy");
         vBox2.setPadding(new Insets(10, 20, 10, 20));
+        vBox2.getStyleClass().add("vbox");
         
         FlowPane flowPane = new FlowPane(vBox2);
         flowPane.setAlignment(Pos.CENTER);
         
         Scene scene = new Scene(flowPane, 400, 300);
+        scene.getStylesheets().add("file:src/Ch2Part1Apps/styles.css");
         primaryStage.setScene(scene);        
         primaryStage.setTitle("Login Screen");
         primaryStage.show();
