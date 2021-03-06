@@ -53,7 +53,7 @@ public class SliderDemo extends Application
       slider.setMajorTickUnit(MAJOR_TICK_UNIT);
       slider.setMinorTickCount(MINOR_TICK_COUNT);
       slider.setShowTickLabels(true);
-      slider.setSnapToTicks(true);
+      //slider.setSnapToTicks(true);
       slider.setPrefWidth(SLIDER_WIDTH);
       
       // Register an event handler for the Slider.
