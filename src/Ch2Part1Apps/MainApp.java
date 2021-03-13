@@ -77,8 +77,9 @@ public class MainApp extends Application{
         public void handle(ActionEvent event) {
             if(event.getSource() == buttonSubmit){
                 if(textFieldLoginName.getText().equals("aashgar") &&
-                        passwordField.getText().equals("123456"))
+                        passwordField.getText().equals("123456")){
                     labelError.setText("Valid User");
+                }
                 else
                     labelError.setText("Invalid Data");
             }
