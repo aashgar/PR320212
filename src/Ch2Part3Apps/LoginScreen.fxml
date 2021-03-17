@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<FlowPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-font-size: 14; -fx-font-weight: bold;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ch2Part3Apps.LoginScreenController">
+   <children>
+      <VBox prefHeight="333.0" prefWidth="341.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="263.0" prefWidth="341.0" spacing="20.0">
+               <children>
+                  <Label text="Login Information" />
+                  <TextField fx:id="textFieldLoginName" />
+                  <PasswordField fx:id="passwordField" />
+                  <Label fx:id="labelError" text="Initial Text" />
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="59.0" prefWidth="341.0" spacing="20.0">
+               <children>
+                  <Button fx:id="buttonSubmit" mnemonicParsing="false" onAction="#handleButtonSubmit" text="Submit" />
+                  <Button fx:id="buttonCancel" mnemonicParsing="false" onAction="#handleButtonCancel" text="Cancel" />
+               </children>
+            </HBox>
+         </children>
+         <effect>
+            <InnerShadow choke="0.33" color="#d01abe" height="59.54" radius="42.615" width="112.92" />
+         </effect>
+      </VBox>
+   </children>
+</FlowPane>
