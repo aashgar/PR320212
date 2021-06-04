@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<FlowPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="712.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ch5Apps.JpaPaneController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="523.0" prefWidth="712.0" spacing="15.0" style="-fx-background-color: #4ed96c;">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <children>
+            <HBox alignment="CENTER" prefHeight="388.0" prefWidth="599.0" spacing="10.0">
+               <children>
+                  <VBox prefHeight="325.0" prefWidth="344.0" spacing="20.0">
+                     <children>
+                        <GridPane hgap="10.0" maxHeight="-Infinity" prefHeight="201.0" prefWidth="336.0">
+                          <columnConstraints>
+                            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="157.0" minWidth="10.0" prefWidth="110.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="223.0" minWidth="10.0" prefWidth="223.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="322.0" text="Department Information" textFill="#ab1c76" GridPane.columnSpan="2">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label text="ID:" textFill="#ab1c76" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Name:" textFill="#ab1c76" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Location:" textFill="#ab1c76" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtFieldDeptID" onAction="#txtFieldDeptIDHandle" prefHeight="30.0" prefWidth="178.0" style="-fx-text-fill: #ab1c76;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="txtFieldDeptName" editable="false" style="-fx-text-fill: #ab1c76;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="txtFieldDeptLocation" editable="false" style="-fx-text-fill: #ab1c76;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </GridPane>
+                        <GridPane hgap="10.0" maxHeight="-Infinity" prefHeight="202.0" prefWidth="335.0">
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="331.0" text="Employee Infromation" textFill="#8d0d0d" GridPane.columnSpan="2">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Name:" textFill="#8d0d0d" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Salary:" textFill="#8d0d0d" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtFieldEmpName" style="-fx-text-fill: #8d0d0d;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="txtFieldEmpSalary" style="-fx-text-fill: #8d0d0d;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="txtFieldEmpDeptID" editable="false" style="-fx-text-fill: #8d0d0d;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font></TextField>
+                              <TextField fx:id="txtFieldEmpID" onAction="#txtFieldEmpIDHandle" style="-fx-text-fill: #8d0d0d;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font></TextField>
+                              <Label text="ID:" textFill="#8d0d0d" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Department ID:" textFill="#8d0d0d" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="178.0" minWidth="10.0" prefWidth="108.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.0" minWidth="10.0" prefWidth="225.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="325.0" prefWidth="336.0" spacing="10.0">
+                     <children>
+                        <Label prefHeight="20.0" prefWidth="331.0" text="List of Employees" textFill="#8d0d0d">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tableView" prefHeight="364.0" prefWidth="327.0" style="-fx-font-size: 14px;">
+                          <columns>
+                            <TableColumn fx:id="tcID" prefWidth="59.0" text="ID" />
+                            <TableColumn fx:id="tcName" prefWidth="84.0" text="Name" />
+                              <TableColumn fx:id="tcDepartment" prefWidth="99.0" text="Department" />
+                              <TableColumn fx:id="tcSalary" prefWidth="82.0" text="Salary" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="0.0" prefWidth="672.0" spacing="10.0">
+               <children>
+                  <Button fx:id="buttonShow" mnemonicParsing="false" onAction="#buttonShowHandle" prefHeight="30.0" prefWidth="90.0" stylesheets="@jpastyles.css" text="Show" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonAdd" mnemonicParsing="false" onAction="#buttonAddHandle" prefHeight="30.0" prefWidth="90.0" stylesheets="@jpastyles.css" text="Add" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonUpdate" mnemonicParsing="false" onAction="#buttonUpdateHandle" prefHeight="30.0" prefWidth="90.0" stylesheets="@jpastyles.css" text="Update" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonDelete" mnemonicParsing="false" onAction="#buttonDeleteHandle" prefHeight="30.0" prefWidth="90.0" stylesheets="@jpastyles.css" text="Delete" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonReset" mnemonicParsing="false" onAction="#buttonResetHandle" prefHeight="30.0" prefWidth="90.0" stylesheets="@jpastyles.css" text="Reset" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</FlowPane>
